@@ -1,0 +1,54 @@
+<mat-toolbar style="background-color: #ffac1a;">
+  <a routerLink="/" ></a>
+    <a routerLink="/sidenav" >
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" style="color:rgba(255, 255, 255, 0.82)">
+      <mat-icon>menu_book</mat-icon>
+    </button> -->
+
+    <button class="logo" (click)="toggleCollapse()"><mat-icon>menu_book</mat-icon></button>
+    </a>
+    <div class="logo-text ml20">My Class</div>
+    <!-- <span>My Class</span> -->
+    <span class="example-spacer"></span>
+    <div class="container mr20" style=" overflow: hidden;">
+      <!-- LogIn -->
+      <a
+      *ngIf="!isLoggedIn"
+       [routerLink]="'/signup'" style="color:white">
+        <button mat-button class="example-icon favorite-icon mr20">
+          Register
+        </button>
+      </a>
+
+      <a 
+      *ngIf="!isLoggedIn"
+      [routerLink]="'/login'"
+        style="color:white">
+        <button mat-button class="example-icon favorite-icon mr20">
+          LogIn <mat-icon>login</mat-icon>
+        </button>
+      </a>
+      <!-- <button mat-icon-button class="example-icon ml20 mr20" aria-label="Example icon-button with share icon" style="margin: 20px;">
+      <mat-icon>share</mat-icon>
+      </button> -->
+
+      <a 
+      *ngIf="isLoggedIn"
+       style="color:white">
+        <button mat-button class="example-icon favorite-icon mr20">
+          <mat-icon>account_circle</mat-icon>
+          <span class="material-icons-outlined">
+            {{login.getUser().username}}
+            </span> 
+        </button>
+      </a>
+
+      <a (click) = "loggout()"
+      *ngIf="isLoggedIn"
+      style="color:white">
+        <button mat-button class="example-icon favorite-icon mr20">
+        <mat-icon>logout</mat-icon>   Logout
+        </button>
+      </a>
+    </div>
+  </mat-toolbar>

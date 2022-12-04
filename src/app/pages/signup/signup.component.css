@@ -1,0 +1,34 @@
+.full-width{
+    width: 100%;
+}
+
+.width-half{
+    width: 50%;
+}
+.welcome{
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 40px;
+    font-size: 2.6rem;
+    letter-spacing: 0;
+    color: white;
+    letter-spacing: 0.05rem;
+}
+.matcover{
+    color: white;
+    max-width: 50px;
+    max-height: 20px;
+}
+.overlayS{
+    background: -webkit-linear-gradient(#dba68c, #d693b9);
+    background: linear-gradient(#dba68c, #d693b9);
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    height: 650px;
+    position: absolute;
+    width: 360px;
+    z-index: 1;
+    border-radius: 10px;
+}
